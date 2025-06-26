@@ -548,8 +548,9 @@ export default function Home() {
                   <Button
                     variant="outline"
                     className="border-gray-700 text-gray-300 hover:bg-gray-800 hover:text-white"
+                    
                   >
-                    <span>Saiba mais</span>
+                    <a href='https://jefferstech.com.br'>Saiba mais na JeffersTech</a>
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </div>
@@ -597,8 +598,9 @@ export default function Home() {
                   <Button
                     variant="outline"
                     className="border-gray-700 text-gray-300 hover:bg-gray-800 hover:text-white"
+                    
                   >
-                    <span>Saiba mais</span>
+                    <a href='https://jefferstech.com.br'>Saiba mais na JeffersTech</a>
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </div>
@@ -646,8 +648,9 @@ export default function Home() {
                   <Button
                     variant="outline"
                     className="border-gray-700 text-gray-300 hover:bg-gray-800 hover:text-white"
+                    
                   >
-                    <span>Saiba mais</span>
+                    <a href='https://jefferstech.com.br'>Saiba mais na JeffersTech</a>
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </div>
@@ -694,8 +697,9 @@ export default function Home() {
                   <Button
                     variant="outline"
                     className="border-gray-700 text-gray-300 hover:bg-gray-800 hover:text-white"
+                    
                   >
-                    <span>Saiba mais</span>
+                    <a href='https://jefferstech.com.br'>Saiba mais na JeffersTech</a>
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </div>
@@ -798,7 +802,7 @@ export default function Home() {
               </p>
               <div className="flex space-x-3">
                 <a
-                  href="https://instagram.com/jefferson_lima5286"
+                  href="https://www.instagram.com/jefferslima_5286/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-colors duration-300"
@@ -807,7 +811,7 @@ export default function Home() {
                   <Instagram className="w-4 h-4" />
                 </a>
                 <a
-                  href="#"
+                  href="https://github.com/Jefferson5286"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition-colors duration-300"
@@ -816,7 +820,7 @@ export default function Home() {
                   <Github className="w-4 h-4" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/jefflima-dev"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition-colors duration-300"
