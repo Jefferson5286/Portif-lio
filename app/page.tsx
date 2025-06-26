@@ -20,7 +20,7 @@ import {
   Calendar,
   Clock,
   CheckCircle2,
-  ArrowRight,
+  ArrowRight, Rocket, Send,
 } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
 // import { FAQSection } from "@/components/faq-section"
@@ -273,221 +273,138 @@ export default function Home() {
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <Image
-            src="/placeholder.svg?height=600&width=1200"
-            alt="Tech pattern"
-            width={1200}
-            height={600}
-            className="w-full h-full object-cover"
+              src="/placeholder.svg?height=600&width=1200"
+              alt="Tech pattern"
+              width={1200}
+              height={600}
+              className="w-full h-full object-cover"
           />
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <Badge className="mb-4 bg-gray-800 text-gray-300 border-gray-700">Expertise</Badge>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Habilidades Técnicas</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Minhas Ferramentas</h2>
             <p className="text-gray-400 text-lg">
-              Combinando conhecimento técnico e experiência prática para desenvolver soluções eficientes e escaláveis.
+              Meu ecossistema de tecnologias preferidas para criar, implantar e escalar aplicações de alto impacto.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Languages */}
-            <Card className="bg-gradient-to-br from-gray-900 to-gray-800 border-gray-800 hover:border-green-500/30 transition-all duration-300 overflow-hidden group">
-              <CardContent className="p-6">
-                <div className="absolute top-0 right-0 w-24 h-24 bg-green-500/5 rounded-bl-full -mr-12 -mt-12 group-hover:bg-green-500/10 transition-all duration-500"></div>
+
+            {/* Backend */}
+            <Card className="bg-gradient-to-br from-gray-900 to-gray-800 border-gray-800 hover:border-green-500/30 transition-all duration-300 flex flex-col">
+              <CardContent className="p-6 flex flex-col flex-grow">
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 rounded-lg bg-green-500/10 flex items-center justify-center mr-4">
-                    <Terminal className="w-6 h-6 text-green-400" />
+                  <div className="w-12 h-12 rounded-lg bg-green-500/10 flex items-center justify-center mr-4 flex-shrink-0">
+                    <Server className="w-6 h-6 text-green-400" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">Linguagens</h3>
+                  <h3 className="text-xl font-semibold text-white">Backend</h3>
                 </div>
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-300">Python</span>
-                    <div className="w-32 bg-gray-700 h-2 rounded-full overflow-hidden">
-                      <div className="bg-green-500 h-2 rounded-full" style={{ width: "100%" }}></div>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-300">Kotlin</span>
-                    <div className="w-32 bg-gray-700 h-2 rounded-full overflow-hidden">
-                      <div className="bg-green-500 h-2 rounded-full" style={{ width: "50%" }}></div>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-300">TypeScript</span>
-                    <div className="w-32 bg-gray-700 h-2 rounded-full overflow-hidden">
-                      <div className="bg-green-500 h-2 rounded-full" style={{ width: "96%" }}></div>
-                    </div>
-                  </div>
+                <div className="grid grid-cols-2 gap-4 text-sm mt-auto">
+                  <div className="flex items-center gap-2 bg-gray-800/50 py-2 px-3 rounded-md"><i className="devicon-fastapi-plain colored text-2xl"></i><span>FastAPI</span></div>
+                  <div className="flex items-center gap-2 bg-gray-800/50 py-2 px-3 rounded-md"><i className="devicon-django-plain text-2xl"></i><span>Django & DRF</span></div>
+                  <div className="flex items-center gap-2 bg-gray-800/50 py-2 px-3 rounded-md"><i className="devicon-spring-plain colored text-2xl"></i><span>Spring Bot</span></div>
+                  <div className="flex items-center gap-2 bg-gray-800/50 py-2 px-3 rounded-md"><i className="devicon-java-plain colored text-2xl"></i><span>Java</span></div>
+                  <div className="flex items-center gap-2 bg-gray-800/50 py-2 px-3 rounded-md"><i className="devicon-python-plain colored text-2xl"></i><span>Python</span></div>
                 </div>
+                <div className='flex-1'/>
               </CardContent>
             </Card>
 
             {/* Frontend */}
-            <Card className="bg-gradient-to-br from-gray-900 to-gray-800 border-gray-800 hover:border-blue-500/30 transition-all duration-300 overflow-hidden group">
-              <CardContent className="p-6">
-                <div className="absolute top-0 right-0 w-24 h-24 bg-blue-500/5 rounded-bl-full -mr-12 -mt-12 group-hover:bg-blue-500/10 transition-all duration-500"></div>
+            <Card className="bg-gradient-to-br from-gray-900 to-gray-800 border-gray-800 hover:border-blue-500/30 transition-all duration-300 flex flex-col">
+              <CardContent className="p-6 flex flex-col flex-grow">
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center mr-4">
+                  <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center mr-4 flex-shrink-0">
                     <Code className="w-6 h-6 text-blue-400" />
                   </div>
                   <h3 className="text-xl font-semibold text-white">Frontend</h3>
                 </div>
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-300">NextJS/React</span>
-                    <div className="w-32 bg-gray-700 h-2 rounded-full overflow-hidden">
-                      <div className="bg-blue-500 h-2 rounded-full" style={{ width: "90%" }}></div>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-300">Vue</span>
-                    <div className="w-32 bg-gray-700 h-2 rounded-full overflow-hidden">
-                      <div className="bg-blue-500 h-2 rounded-full" style={{ width: "50%" }}></div>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-300">Tailwind CSS</span>
-                    <div className="w-32 bg-gray-700 h-2 rounded-full overflow-hidden">
-                      <div className="bg-blue-500 h-2 rounded-full" style={{ width: "100%" }}></div>
-                    </div>
-                  </div>
+                <div className="grid grid-cols-2 gap-4 text-sm mt-auto">
+                  <div className="flex items-center gap-2 bg-gray-800/50 py-2 px-3 rounded-md"><i className="devicon-nextjs-plain colored text-2xl"></i><span>Next.js</span></div>
+                  <div className="flex items-center gap-2 bg-gray-800/50 py-2 px-3 rounded-md"><i className="devicon-react-original colored text-2xl"></i><span>React</span></div>
+                  <div className="flex items-center gap-2 bg-gray-800/50 py-2 px-3 rounded-md"><i className="devicon-vuejs-plain colored text-2xl"></i><span>Vue.js</span></div>
+                  <div className="flex items-center gap-2 bg-gray-800/50 py-2 px-3 rounded-md"><i className="devicon-tailwindcss-plain colored text-2xl"></i><span>Tailwind CSS</span></div>
+                  <div className="flex items-center gap-2 bg-gray-800/50 py-2 px-3 rounded-md"><i className="devicon-jquery-plain colored text-2xl"></i><span>jQuery</span></div>
                 </div>
               </CardContent>
             </Card>
 
-            {/* Backend */}
-            <Card className="bg-gradient-to-br from-gray-900 to-gray-800 border-gray-800 hover:border-purple-500/30 transition-all duration-300 overflow-hidden group">
-              <CardContent className="p-6">
-                <div className="absolute top-0 right-0 w-24 h-24 bg-purple-500/5 rounded-bl-full -mr-12 -mt-12 group-hover:bg-purple-500/10 transition-all duration-500"></div>
+            {/* Databases & Cloud */}
+            <Card className="bg-gradient-to-br from-gray-900 to-gray-800 border-gray-800 hover:border-purple-500/30 transition-all duration-300 flex flex-col">
+              <CardContent className="p-6 flex flex-col flex-grow">
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center mr-4">
-                    <Server className="w-6 h-6 text-purple-400" />
+                  <div className="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center mr-4 flex-shrink-0">
+                    <Database className="w-6 h-6 text-purple-400" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">Backend</h3>
+                  <h3 className="text-xl font-semibold text-white">Banco de Dados & Cloud</h3>
                 </div>
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-300">FastAPI</span>
-                    <div className="w-32 bg-gray-700 h-2 rounded-full overflow-hidden">
-                      <div className="bg-purple-500 h-2 rounded-full" style={{ width: "100%" }}></div>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-300">Django</span>
-                    <div className="w-32 bg-gray-700 h-2 rounded-full overflow-hidden">
-                      <div className="bg-purple-500 h-2 rounded-full" style={{ width: "95%" }}></div>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-300">Django REST</span>
-                    <div className="w-32 bg-gray-700 h-2 rounded-full overflow-hidden">
-                      <div className="bg-purple-500 h-2 rounded-full" style={{ width: "95%" }}></div>
-                    </div>
-                  </div>
+                <div className="grid grid-cols-2 gap-4 text-sm mt-auto">
+                  <div className="flex items-center gap-2 bg-gray-800/50 py-2 px-3 rounded-md"><i className="devicon-postgresql-plain colored text-2xl"></i><span>PostgreSQL</span></div>
+                  <div className="flex items-center gap-2 bg-gray-800/50 py-2 px-3 rounded-md"><i className="devicon-mongodb-plain colored text-2xl"></i><span>MongoDB</span></div>
+                  <div className="flex items-center gap-2 bg-gray-800/50 py-2 px-3 rounded-md"><i className="devicon-redis-plain colored text-2xl"></i><span>Redis</span></div>
+                  <div className="flex items-center gap-2 bg-gray-800/50 py-2 px-3 rounded-md"><i className="devicon-firebase-plain colored text-2xl"></i><span>Firebase</span></div>
+                  <div className="flex items-center gap-2 bg-gray-800/50 py-2 px-3 rounded-md"><i className="devicon-amazonwebservices-plain-wordmark colored text-2xl"></i><span>AWS</span></div>
+                  <div className="flex items-center gap-2 bg-gray-800/50 py-2 px-3 rounded-md"><i className="devicon-googlecloud-plain colored text-2xl"></i><span>Google Cloud</span></div>
                 </div>
               </CardContent>
             </Card>
 
-            {/* Databases */}
-            <Card className="bg-gradient-to-br from-gray-900 to-gray-800 border-gray-800 hover:border-teal-500/30 transition-all duration-300 overflow-hidden group">
-              <CardContent className="p-6">
-                <div className="absolute top-0 right-0 w-24 h-24 bg-teal-500/5 rounded-bl-full -mr-12 -mt-12 group-hover:bg-teal-500/10 transition-all duration-500"></div>
+            {/* Mobile & Desktop */}
+            <Card className="bg-gradient-to-br from-gray-900 to-gray-800 border-gray-800 hover:border-orange-500/30 transition-all duration-300 flex flex-col">
+              <CardContent className="p-6 flex flex-col flex-grow">
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 rounded-lg bg-teal-500/10 flex items-center justify-center mr-4">
-                    <Database className="w-6 h-6 text-teal-400" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white">Bancos de Dados</h3>
-                </div>
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-300">MongoDB</span>
-                    <div className="w-32 bg-gray-700 h-2 rounded-full overflow-hidden">
-                      <div className="bg-teal-500 h-2 rounded-full" style={{ width: "75%" }}></div>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-300">Firebase</span>
-                    <div className="w-32 bg-gray-700 h-2 rounded-full overflow-hidden">
-                      <div className="bg-teal-500 h-2 rounded-full" style={{ width: "85%" }}></div>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-300">PostgreSQL</span>
-                    <div className="w-32 bg-gray-700 h-2 rounded-full overflow-hidden">
-                      <div className="bg-teal-500 h-2 rounded-full" style={{ width: "90%" }}></div>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Mobile/Desktop */}
-            <Card className="bg-gradient-to-br from-gray-900 to-gray-800 border-gray-800 hover:border-orange-500/30 transition-all duration-300 overflow-hidden group">
-              <CardContent className="p-6">
-                <div className="absolute top-0 right-0 w-24 h-24 bg-orange-500/5 rounded-bl-full -mr-12 -mt-12 group-hover:bg-orange-500/10 transition-all duration-500"></div>
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 rounded-lg bg-orange-500/10 flex items-center justify-center mr-4">
+                  <div className="w-12 h-12 rounded-lg bg-orange-500/10 flex items-center justify-center mr-4 flex-shrink-0">
                     <Smartphone className="w-6 h-6 text-orange-400" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">Mobile/Desktop</h3>
+                  <h3 className="text-xl font-semibold text-white">Mobile & Desktop</h3>
                 </div>
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-300">React Native</span>
-                    <div className="w-32 bg-gray-700 h-2 rounded-full overflow-hidden">
-                      <div className="bg-orange-500 h-2 rounded-full" style={{ width: "85%" }}></div>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-300">Kivy</span>
-                    <div className="w-32 bg-gray-700 h-2 rounded-full overflow-hidden">
-                      <div className="bg-orange-500 h-2 rounded-full" style={{ width: "80%" }}></div>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-300">Kotlin Native</span>
-                    <div className="w-32 bg-gray-700 h-2 rounded-full overflow-hidden">
-                      <div className="bg-orange-500 h-2 rounded-full" style={{ width: "40%" }}></div>
-                    </div>
-                  </div>
+                <div className="grid grid-cols-2 gap-4 text-sm mt-auto">
+                  <div className="flex items-center gap-2 bg-gray-800/50 py-2 px-3 rounded-md"><i className="devicon-react-original colored text-2xl"></i><span>React Native</span></div>
+                  <div className="flex items-center gap-2 bg-gray-800/50 py-2 px-3 rounded-md"><i className="devicon-python-plain colored text-2xl"></i><span>Kivy/KivyMD</span></div>
+                  <div className="flex items-center gap-2 bg-gray-800/50 py-2 px-3 rounded-md"><i className="devicon-python-plain colored text-2xl"></i><span>Pygame</span></div>
+                  <div className="flex items-center gap-2 bg-gray-800/50 py-2 px-3 rounded-md"><i className="devicon-kotlin-plain colored text-2xl"></i><span>Kotlin Native</span></div>
                 </div>
               </CardContent>
             </Card>
 
-            {/* Automation */}
-            <Card className="bg-gradient-to-br from-gray-900 to-gray-800 border-gray-800 hover:border-pink-500/30 transition-all duration-300 overflow-hidden group">
-              <CardContent className="p-6">
-                <div className="absolute top-0 right-0 w-24 h-24 bg-pink-500/5 rounded-bl-full -mr-12 -mt-12 group-hover:bg-pink-500/10 transition-all duration-500"></div>
+            {/* Ferramentas & DevOps */}
+            <Card className="bg-gradient-to-br from-gray-900 to-gray-800 border-gray-800 hover:border-teal-500/30 transition-all duration-300 flex flex-col">
+              <CardContent className="p-6 flex flex-col flex-grow">
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 rounded-lg bg-pink-500/10 flex items-center justify-center mr-4">
-                    <Bot className="w-6 h-6 text-pink-400" />
+                  <div className="w-12 h-12 rounded-lg bg-teal-500/10 flex items-center justify-center mr-4 flex-shrink-0">
+                    <Terminal className="w-6 h-6 text-teal-400" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">Automação</h3>
+                  <h3 className="text-xl font-semibold text-white">Ferramentas & DevOps</h3>
                 </div>
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-300">WhatsApp</span>
-                    <div className="w-32 bg-gray-700 h-2 rounded-full overflow-hidden">
-                      <div className="bg-pink-500 h-2 rounded-full" style={{ width: "80%" }}></div>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-300">Discord</span>
-                    <div className="w-32 bg-gray-700 h-2 rounded-full overflow-hidden">
-                      <div className="bg-pink-500 h-2 rounded-full" style={{ width: "90%" }}></div>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-300">Instagram</span>
-                    <div className="w-32 bg-gray-700 h-2 rounded-full overflow-hidden">
-                      <div className="bg-pink-500 h-2 rounded-full" style={{ width: "70%" }}></div>
-                    </div>
-                  </div>
+                <div className="grid grid-cols-2 gap-4 text-sm mt-auto">
+                  <div className="flex items-center gap-2 bg-gray-800/50 py-2 px-3 rounded-md"><i className="devicon-git-plain colored text-2xl"></i><span>Git</span></div>
+                  <div className="flex items-center gap-2 bg-gray-800/50 py-2 px-3 rounded-md"><i className="devicon-github-original colored text-2xl"></i><span>Github</span></div>
+                  <div className="flex items-center gap-2 bg-gray-800/50 py-2 px-3 rounded-md"><i className="devicon-vercel-original colored text-2xl"></i><span>Vercel</span></div>
+                  <div className="flex items-center gap-2 bg-gray-800/50 py-2 px-3 rounded-md"><Rocket className="w-4 h-4" /><span>Render.com</span></div>
                 </div>
               </CardContent>
             </Card>
+
+            {/* Automação & APIs */}
+            <Card className="bg-gradient-to-br from-gray-900 to-gray-800 border-gray-800 hover:border-pink-500/30 transition-all duration-300 flex flex-col">
+              <CardContent className="p-6 flex flex-col flex-grow">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 rounded-lg bg-pink-500/10 flex items-center justify-center mr-4 flex-shrink-0">
+                    <Bot className="w-6 h-6 text-pink-400" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">Automação & APIs</h3>
+                </div>
+                <div className="grid grid-cols-2 gap-4 text-sm mt-auto">
+                  <div className="flex items-center gap-2 bg-gray-800/50 py-2 px-3 rounded-md"><MessageCircle className="w-4 h-4 text-green-400" /><span>WhatsApp</span></div>
+                  <div className="flex items-center gap-2 bg-gray-800/50 py-2 px-3 rounded-md"><Instagram className="w-4 h-4 text-pink-400" /><span>Instagram</span></div>
+                  <div className="flex items-center gap-2 bg-gray-800/50 py-2 px-3 rounded-md"><i className="devicon-discordjs-plain colored text-2xl"></i><span>Discord</span></div>
+                  <div className="flex items-center gap-2 bg-gray-800/50 py-2 px-3 rounded-md"><Send className="w-4 h-4 text-sky-400" /><span>Telegram</span></div>
+                </div>
+              </CardContent>
+            </Card>
+
           </div>
         </div>
       </section>
