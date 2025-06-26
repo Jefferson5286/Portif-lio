@@ -23,10 +23,10 @@ import {
   ArrowRight,
 } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
-import { FAQSection } from "@/components/faq-section"
-import { ProjectsSection } from "@/components/projects-section"
+// import { FAQSection } from "@/components/faq-section"
+// import { ProjectsSection } from "@/components/projects-section"
 import { StatsSection } from "@/components/stats-section"
-import { TestimonialsSection } from "@/components/testimonials-section"
+// import { TestimonialsSection } from "@/components/testimonials-section"
 import { ProcessSection } from "@/components/process-section"
 import Image from "next/image"
 
@@ -38,15 +38,15 @@ export default function Home() {
       {/* Header/Hero Section with Background Image */}
       <header className="relative py-24 md:py-32 overflow-hidden border-b border-gray-800">
         {/* Background Code Pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <Image
-            src="/placeholder.svg?height=800&width=1200"
-            alt="Code background"
-            width={1200}
-            height={800}
-            className="w-full h-full object-cover"
-          />
-        </div>
+        {/*<div className="absolute inset-0 opacity-2">*/}
+        {/*  <Image*/}
+        {/*    src="/thumb/background.webp"*/}
+        {/*    alt="Code background"*/}
+        {/*    width={1200}*/}
+        {/*    height={800}*/}
+        {/*    className="w-full h-full object-cover"*/}
+        {/*  />*/}
+        {/*</div>*/}
 
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0c10] via-transparent to-[#0a0c10]"></div>
@@ -92,65 +92,6 @@ export default function Home() {
                   </a>
                 </Button>
               </div>
-
-              <div className="mt-12">
-                <p className="text-sm text-gray-400 mb-3 uppercase tracking-wider font-medium">
-                  Tecnologias Principais
-                </p>
-                <div className="flex flex-wrap gap-6">
-                  <div className="flex items-center gap-2">
-                    <div className="w-10 h-10 bg-blue-500/10 rounded-md flex items-center justify-center">
-                      <Image
-                        src="/placeholder.svg?height=24&width=24"
-                        alt="React"
-                        width={24}
-                        height={24}
-                        className="opacity-80"
-                      />
-                    </div>
-                    <span className="text-gray-300">React</span>
-                  </div>
-
-                  <div className="flex items-center gap-2">
-                    <div className="w-10 h-10 bg-green-500/10 rounded-md flex items-center justify-center">
-                      <Image
-                        src="/placeholder.svg?height=24&width=24"
-                        alt="Python"
-                        width={24}
-                        height={24}
-                        className="opacity-80"
-                      />
-                    </div>
-                    <span className="text-gray-300">Python</span>
-                  </div>
-
-                  <div className="flex items-center gap-2">
-                    <div className="w-10 h-10 bg-yellow-500/10 rounded-md flex items-center justify-center">
-                      <Image
-                        src="/placeholder.svg?height=24&width=24"
-                        alt="JavaScript"
-                        width={24}
-                        height={24}
-                        className="opacity-80"
-                      />
-                    </div>
-                    <span className="text-gray-300">TypScript</span>
-                  </div>
-
-                  <div className="flex items-center gap-2">
-                    <div className="w-10 h-10 bg-teal-500/10 rounded-md flex items-center justify-center">
-                      <Image
-                        src="/placeholder.svg?height=24&width=24"
-                        alt="Node.js"
-                        width={24}
-                        height={24}
-                        className="opacity-80"
-                      />
-                    </div>
-                    <span className="text-gray-300">Node.js</span>
-                  </div>
-                </div>
-              </div>
             </div>
 
             <div className="lg:w-1/2 flex justify-center lg:justify-end">
@@ -158,7 +99,7 @@ export default function Home() {
                 <div className="absolute -inset-1 bg-gradient-to-r from-green-600 to-teal-600 rounded-full blur-lg opacity-30"></div>
                 <div className="relative rounded-full border-2 border-gray-800 p-1 bg-gray-900">
                   <Image
-                    src="/placeholder.svg?height=400&width=400"
+                    src="/thumb/profile.webp"
                     alt="Jefferson Lima - Desenvolvedor Fullstack"
                     width={400}
                     height={400}
@@ -175,6 +116,39 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="mt-12">
+            <p className="text-sm text-gray-400 uppercase tracking-wider font-medium mb-4">
+              Tecnologias Principais
+            </p>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-6">
+              {[
+                { name: 'Python', src: 'python-original.svg', bg: 'bg-blue-500/10' },
+                { name: 'Java', src: 'java-plain.svg', bg: 'bg-red-600/10' },
+                { name: 'TypeScript', src: 'typescript-plain.svg', bg: 'bg-blue-600/10' },
+                { name: 'AWS', src: 'amazonwebservices-original-wordmark.svg', bg: 'bg-orange-500/10' },
+                { name: 'Google Cloud', src: 'googlecloud-original.svg', bg: 'bg-blue-400/10' },
+                { name: 'MongoDB', src: 'mongodb-plain.svg', bg: 'bg-green-600/10' },
+                { name: 'Firebase', src: 'firebase-plain.svg', bg: 'bg-yellow-500/10' },
+                { name: 'PostgreSQL', src: 'postgresql-plain.svg', bg: 'bg-sky-700/10' },
+              ].map(({ name, src, bg }) => (
+                  <div key={name} className="flex items-center gap-2 w-full min-w-0">
+                    <div className={`w-10 h-10 ${bg} rounded-md flex items-center justify-center`}>
+                      <Image
+                          src={`/thumb/icon/${src}`}
+                          alt={name}
+                          width={24}
+                          height={24}
+                          className="opacity-80"
+                      />
+                    </div>
+                    <span className="text-gray-300 truncate">{name}</span>
+                  </div>
+              ))}
+            </div>
+          </div>
+
+
         </div>
       </header>
 
@@ -934,7 +908,7 @@ export default function Home() {
       <div className="fixed bottom-6 right-6 z-50">
         <div className="absolute -inset-1 bg-green-500 rounded-full blur-lg opacity-30 animate-pulse"></div>
         <a
-          href="https://wa.me/5598987694092"
+          href="https://wa.me/556181666703"
           target="_blank"
           rel="noopener noreferrer"
           className="relative bg-green-600 hover:bg-green-700 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
